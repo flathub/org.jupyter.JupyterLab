@@ -5,6 +5,9 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: "22.08"
 command: run.sh
+build-options:
+  build-args:
+    - --share=network
 finish-args:
   - --share=ipc
   - --share=network
@@ -15,6 +18,19 @@ finish-args:
 rename-desktop-file: jupyterlab-desktop.desktop
 rename-icon: jupyterlab-desktop
 modules:
+  - name: mamba
+    buildsystem: simple
+    build-commands:
+      #- install -D Anaconda3-2023.07-2-Linux-x86_64.sh $FLATPAK_DEST/anaconda-sh/Anaconda3-2023.07-2-Linux-x86_64.sh
+      - bash Miniforge3-Linux-x86_64.sh -b -p $FLATPAK_DEST/anaconda
+      - rm Miniforge3-Linux-x86_64.sh
+      - $FLATPAK_DEST/anaconda/bin/mamba create -n jupyterlab xeus-cling -c conda-forge
+    sources:
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+        sha256: b3e14bd70f99bc8959445fad3532128a6af36c5e77bc62226db0e80d1df0e9e9
   - name: zypak
     sources:
       - type: git
