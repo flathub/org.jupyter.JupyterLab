@@ -18,16 +18,31 @@ modules:
   - name: mamba
     buildsystem: simple
     build-commands:
-      #- install -D Anaconda3-2023.07-2-Linux-x86_64.sh $FLATPAK_DEST/anaconda-sh/Anaconda3-2023.07-2-Linux-x86_64.sh
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab-4.0.7-pyhd8ed1ab_0.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download xeus-cling-0.15.3-h7bb6b15_1.conda
       - bash Miniforge3-Linux-x86_64.sh -b -p $FLATPAK_DEST/anaconda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/xeus-cling-0.15.3-h7bb6b15_1.conda --offline
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab-4.0.7-pyhd8ed1ab_0.conda --offline
+      - rm -r $FLATPAK_DEST/download
       - rm Miniforge3-Linux-x86_64.sh
-      - $FLATPAK_DEST/anaconda/bin/mamba create -n jupyterlab xeus-cling -c conda-forge
     sources:
       - type: file
         only-arches:
           - x86_64
         url: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
         sha256: b3e14bd70f99bc8959445fad3532128a6af36c5e77bc62226db0e80d1df0e9e9
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/xeus-cling/0.15.3/download/linux-64/xeus-cling-0.15.3-h7bb6b15_1.conda
+        sha256: 865ee6f06e82acc123a1e1ae2537c4bcdb423f74d903bb87f91dc64bb9015f2c
+        dest-filename: xeus-cling-0.15.3-h7bb6b15_1.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyterlab/4.0.7/download/noarch/jupyterlab-4.0.7-pyhd8ed1ab_0.conda
+        sha256: 1d841546fd239d7edefbf00edd3bad4680b12c3eb2549026d6aa70a301f23295
+        dest-filename: jupyterlab-4.0.7-pyhd8ed1ab_0.conda
   - name: zypak
     sources:
       - type: git
