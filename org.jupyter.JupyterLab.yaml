@@ -5,9 +5,6 @@ sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
 base-version: "22.08"
 command: run.sh
-build-options:
-  build-args:
-    - --share=network
 finish-args:
   - --share=ipc
   - --share=network
