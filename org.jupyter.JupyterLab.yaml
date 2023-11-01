@@ -18,11 +18,277 @@ modules:
   - name: mamba
     buildsystem: simple
     build-commands:
-      - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab-4.0.7-pyhd8ed1ab_0.conda
-      - install -Dm 755 -t $FLATPAK_DEST/download xeus-cling-0.15.3-h7bb6b15_1.conda
       - bash Miniforge3-Linux-x86_64.sh -b -p $FLATPAK_DEST/anaconda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/xeus-cling-0.15.3-h7bb6b15_1.conda --offline
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab-4.0.7-pyhd8ed1ab_0.conda --offline
+      - install -Dm 755 -t $FLATPAK_DEST/download _libgcc_mutex.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download ca-certificates.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download ld_impl_linux-64.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download libstdcxx-ng.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download python_abi.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download tzdata.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download libgomp.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download _openmp_mutex.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download libgcc-ng.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download bzip2.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download libexpat.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download libffi.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download libnsl.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download libsodium.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download libuuid.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download libzlib.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download ncurses.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download openssl.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download xz.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download yaml.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download libsqlite.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download readline.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download tk.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download zeromq.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download python.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download attrs.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download backcall.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download backports.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download brotli-python.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download cached_property.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download certifi.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download charset-normalizer.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download debugpy.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download decorator.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download defusedxml.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download entrypoints.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download exceptiongroup.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download executing.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download idna.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download json5.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jsonpointer.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download markupsafe.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download mistune.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download nest-asyncio.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download packaging.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pandocfilters.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download parso.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pickleshare.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pkgutil-resolve-name.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download prometheus_client.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download psutil.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download ptyprocess.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pure_eval.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pycparser.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pygments.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pysocks.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download python-fastjsonschema.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download python-json-logger.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pytz.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pyyaml.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pyzmq.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download rfc3986-validator.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download rpds-py.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download send2trash.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download setuptools.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download six.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download sniffio.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download soupsieve.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download tomli.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download tornado.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download traitlets.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download types-python-dateutil.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download typing_extensions.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download typing_utils.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download uri-template.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download webcolors.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download webencodings.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download websocket-client.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download wheel.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download zipp.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download anyio.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download asttokens.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download async-lru.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download babel.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download backports.functools_lru_cache.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download beautifulsoup4.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download bleach.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download cached-property.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download cffi.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download comm.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download importlib-metadata.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download importlib_resources.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jedi.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jinja2.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab_pygments.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download matplotlib-inline.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download overrides.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download pexpect.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download pip.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download python-dateutil.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download referencing.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download rfc3339-validator.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download terminado.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download tinycss2.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download typing-extensions.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download urllib3.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download argon2-cffi-bindings.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download arrow.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download fqdn.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download importlib_metadata.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jsonschema-specifications.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter_server_terminals.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download platformdirs.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download requests.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download stack_data.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download wcwidth.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download argon2-cffi.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download isoduration.tar.bz2
+      - install -Dm 755 -t $FLATPAK_DEST/download jsonschema.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter_core.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download prompt-toolkit.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jsonschema-with-format-nongpl.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter_client.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download nbformat.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download prompt_toolkit.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download ipython.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter_events.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download nbclient.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download ipykernel.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download nbconvert-core.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter_server.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyter-lsp.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab_server.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download notebook-shim.conda
+      - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/_libgcc_mutex.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ca-certificates.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ld_impl_linux-64.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libstdcxx-ng.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python_abi.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tzdata.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libgomp.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/_openmp_mutex.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libgcc-ng.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/bzip2.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libexpat.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libffi.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libnsl.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libsodium.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libuuid.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libzlib.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ncurses.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/openssl.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/xz.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/yaml.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libsqlite.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/readline.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tk.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/zeromq.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/attrs.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/backcall.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/backports.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/brotli-python.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/cached_property.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/certifi.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/charset-normalizer.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/debugpy.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/decorator.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/defusedxml.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/entrypoints.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/exceptiongroup.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/executing.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/idna.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/json5.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jsonpointer.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/markupsafe.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/mistune.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/nest-asyncio.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/packaging.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pandocfilters.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/parso.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pickleshare.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pkgutil-resolve-name.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/prometheus_client.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/psutil.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ptyprocess.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pure_eval.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pycparser.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pygments.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pysocks.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python-fastjsonschema.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python-json-logger.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pytz.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pyyaml.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pyzmq.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/rfc3986-validator.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/rpds-py.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/send2trash.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/setuptools.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/six.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/sniffio.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/soupsieve.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tomli.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tornado.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/traitlets.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/types-python-dateutil.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/typing_extensions.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/typing_utils.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/uri-template.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/webcolors.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/webencodings.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/websocket-client.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/wheel.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/zipp.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/anyio.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/asttokens.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/async-lru.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/babel.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/backports.functools_lru_cache.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/beautifulsoup4.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/bleach.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/cached-property.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/cffi.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/comm.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/importlib-metadata.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/importlib_resources.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jedi.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jinja2.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab_pygments.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/matplotlib-inline.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/overrides.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pexpect.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pip.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python-dateutil.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/referencing.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/rfc3339-validator.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/terminado.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tinycss2.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/typing-extensions.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/urllib3.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/argon2-cffi-bindings.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/arrow.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/fqdn.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/importlib_metadata.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jsonschema-specifications.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_server_terminals.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/platformdirs.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/requests.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/stack_data.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/wcwidth.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/argon2-cffi.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/isoduration.tar.bz2
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jsonschema.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_core.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/prompt-toolkit.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jsonschema-with-format-nongpl.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_client.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/nbformat.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/prompt_toolkit.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ipython.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_events.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/nbclient.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ipykernel.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/nbconvert-core.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_server.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter-lsp.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab_server.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/notebook-shim.conda
+      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab.conda
       - rm -r $FLATPAK_DEST/download
       - rm Miniforge3-Linux-x86_64.sh
     sources:
@@ -34,15 +300,813 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://anaconda.org/conda-forge/xeus-cling/0.15.3/download/linux-64/xeus-cling-0.15.3-h7bb6b15_1.conda
-        sha256: 865ee6f06e82acc123a1e1ae2537c4bcdb423f74d903bb87f91dc64bb9015f2c
-        dest-filename: xeus-cling-0.15.3-h7bb6b15_1.conda
+        url: https://anaconda.org/conda-forge/_libgcc_mutex/0.1/download/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
+        sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
+        dest-filename: _libgcc_mutex.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ca-certificates/2023.7.22/download/linux-64/ca-certificates-2023.7.22-hbcca054_0.conda
+        sha256: 525b7b6b5135b952ec1808de84e5eca57c7c7ff144e29ef3e96ae4040ff432c1
+        dest-filename: ca-certificates.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ld_impl_linux-64/2.40/download/linux-64/ld_impl_linux-64-2.40-h41732ed_0.conda
+        sha256: f6cc89d887555912d6c61b295d398cff9ec982a3417d38025c45d5dd9b9e79cd
+        dest-filename: ld_impl_linux-64.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libstdcxx-ng/13.2.0/download/linux-64/libstdcxx-ng-13.2.0-h7e041cc_2.conda
+        sha256: ab22ecdc974cdbe148874ea876d9c564294d5eafa760f403ed4fd495307b4243
+        dest-filename: libstdcxx-ng.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/python_abi/3.12/download/linux-64/python_abi-3.12-4_cp312.conda
+        sha256: 182a329de10a4165f6e8a3804caf751f918f6ea6176dd4e5abcdae1ed3095bf6
+        dest-filename: python_abi.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/tzdata/2023c/download/noarch/tzdata-2023c-h71feb2d_0.conda
+        sha256: 0449138224adfa125b220154408419ec37c06b0b49f63c5954724325903ecf55
+        dest-filename: tzdata.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libgomp/13.2.0/download/linux-64/libgomp-13.2.0-h807b86a_2.conda
+        sha256: e1e82348f8296abfe344162b3b5f0ddc2f504759ebeb8b337ba99beaae583b15
+        dest-filename: libgomp.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/_openmp_mutex/4.5/download/linux-64/_openmp_mutex-4.5-2_gnu.tar.bz2
+        sha256: fbe2c5e56a653bebb982eda4876a9178aedfc2b545f25d0ce9c4c0b508253d22
+        dest-filename: _openmp_mutex.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libgcc-ng/13.2.0/download/linux-64/libgcc-ng-13.2.0-h807b86a_2.conda
+        sha256: d361d3c87c376642b99c1fc25cddec4b9905d3d9b9203c1c545b8c8c1b04539a
+        dest-filename: libgcc-ng.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/bzip2/1.0.8/download/linux-64/bzip2-1.0.8-h7f98852_4.tar.bz2
+        sha256: cb521319804640ff2ad6a9f118d972ed76d86bea44e5626c09a13d38f562e1fa
+        dest-filename: bzip2.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libexpat/2.5.0/download/linux-64/libexpat-2.5.0-hcb278e6_1.conda
+        sha256: 74c98a563777ae2ad71f1f74d458a8ab043cee4a513467c159ccf159d0e461f3
+        dest-filename: libexpat.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libffi/3.4.2/download/linux-64/libffi-3.4.2-h7f98852_5.tar.bz2
+        sha256: ab6e9856c21709b7b517e940ae7028ae0737546122f83c2aa5d692860c3b149e
+        dest-filename: libffi.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libnsl/2.0.1/download/linux-64/libnsl-2.0.1-hd590300_0.conda
+        sha256: 26d77a3bb4dceeedc2a41bd688564fe71bf2d149fdcf117049970bc02ff1add6
+        dest-filename: libnsl.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libsodium/1.0.18/download/linux-64/libsodium-1.0.18-h36c2ea0_1.tar.bz2
+        sha256: 53da0c8b79659df7b53eebdb80783503ce72fb4b10ed6e9e05cc0e9e4207a130
+        dest-filename: libsodium.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libuuid/2.38.1/download/linux-64/libuuid-2.38.1-h0b41bf4_0.conda
+        sha256: 787eb542f055a2b3de553614b25f09eefb0a0931b0c87dbcce6efdfd92f04f18
+        dest-filename: libuuid.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libzlib/1.2.13/download/linux-64/libzlib-1.2.13-hd590300_5.conda
+        sha256: 370c7c5893b737596fd6ca0d9190c9715d89d888b8c88537ae1ef168c25e82e4
+        dest-filename: libzlib.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ncurses/6.4/download/linux-64/ncurses-6.4-h59595ed_2.conda
+        sha256: 91cc03f14caf96243cead96c76fe91ab5925a695d892e83285461fb927dece5e
+        dest-filename: ncurses.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/openssl/3.1.4/download/linux-64/openssl-3.1.4-hd590300_0.conda
+        sha256: d15b3e83ce66c6f6fbb4707f2f5c53337124c01fb03bfda1cf25c5b41123efc7
+        dest-filename: openssl.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/xz/5.2.6/download/linux-64/xz-5.2.6-h166bdaf_0.tar.bz2
+        sha256: 03a6d28ded42af8a347345f82f3eebdd6807a08526d47899a42d62d319609162
+        dest-filename: xz.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/yaml/0.2.5/download/linux-64/yaml-0.2.5-h7f98852_2.tar.bz2
+        sha256: a4e34c710eeb26945bdbdaba82d3d74f60a78f54a874ec10d373811a5d217535
+        dest-filename: yaml.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/libsqlite/3.43.2/download/linux-64/libsqlite-3.43.2-h2797004_0.conda
+        sha256: b30279b67fce2382a93c638625ff2b284324e2347e30bd0acab813d89289c18a
+        dest-filename: libsqlite.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/readline/8.2/download/linux-64/readline-8.2-h8228510_1.conda
+        sha256: 5435cf39d039387fbdc977b0a762357ea909a7694d9528ab40f005e9208744d7
+        dest-filename: readline.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/tk/8.6.13/download/linux-64/tk-8.6.13-h2797004_0.conda
+        sha256: 679e944eb93fde45d0963a22598fafacbb429bb9e7ee26009ba81c4e0c435055
+        dest-filename: tk.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/zeromq/4.3.5/download/linux-64/zeromq-4.3.5-h59595ed_0.conda
+        sha256: 53bf2a18224406e9806adb3b270a2c8a028aca0c89bd40114a85d6446f5c98d1
+        dest-filename: zeromq.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/python/3.12.0/download/linux-64/python-3.12.0-hab00c5b_0_cpython.conda
+        sha256: 5398ebae6a1ccbfd3f76361eac75f3ac071527a8072627c4bf9008c689034f48
+        dest-filename: python.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/attrs/23.1.0/download/noarch/attrs-23.1.0-pyh71513ae_1.conda
+        sha256: 063639cd568f5c7a557b0fb1cc27f098598c0d8ff869088bfeb82934674f8821
+        dest-filename: attrs.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/backcall/0.2.0/download/noarch/backcall-0.2.0-pyh9f0ad1d_0.tar.bz2
+        sha256: ee62d6434090c1327a48551734e06bd10e65a64ef7f3b6e68719500dab0e42b9
+        dest-filename: backcall.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/backports/1.0/download/noarch/backports-1.0-pyhd8ed1ab_3.conda
+        sha256: 711602276ae39276cb0faaca6fd0ac851fff0ca17151917569174841ef830bbd
+        dest-filename: backports.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/brotli-python/1.1.0/download/linux-64/brotli-python-1.1.0-py312h30efb56_1.conda
+        sha256: b68706698b6ac0d31196a8bcb061f0d1f35264bcd967ea45e03e108149a74c6f
+        dest-filename: brotli-python.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/cached_property/1.5.2/download/noarch/cached_property-1.5.2-pyha770c72_1.tar.bz2
+        sha256: 6dbf7a5070cc43d90a1e4c2ec0c541c69d8e30a0e25f50ce9f6e4a432e42c5d7
+        dest-filename: cached_property.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/certifi/2023.7.22/download/noarch/certifi-2023.7.22-pyhd8ed1ab_0.conda
+        sha256: db66e31866ff4250c190788769e3a8a1709237c3e9c38d7143aae95ab75fcb31
+        dest-filename: certifi.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/charset-normalizer/3.3.1/download/noarch/charset-normalizer-3.3.1-pyhd8ed1ab_0.conda
+        sha256: a31739c49c4b1c8e0cbdec965ba152683d36ce6e23bdaefcfee99937524dabd1
+        dest-filename: charset-normalizer.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/debugpy/1.8.0/download/linux-64/debugpy-1.8.0-py312h30efb56_1.conda
+        sha256: 8169ebedbd0a1f769446eed6ed165da9aa643f2acc408f452a3121c57f889851
+        dest-filename: debugpy.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/decorator/5.1.1/download/noarch/decorator-5.1.1-pyhd8ed1ab_0.tar.bz2
+        sha256: 328a6a379f9bdfd0230e51de291ce858e6479411ea4b0545fb377c71662ef3e2
+        dest-filename: decorator.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/defusedxml/0.7.1/download/noarch/defusedxml-0.7.1-pyhd8ed1ab_0.tar.bz2
+        sha256: 9717a059677553562a8f38ff07f3b9f61727bd614f505658b0a5ecbcf8df89be
+        dest-filename: defusedxml.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/entrypoints/0.4/download/noarch/entrypoints-0.4-pyhd8ed1ab_0.tar.bz2
+        sha256: 2ec4a0900a4a9f42615fc04d0fb3286b796abe56590e8e042f6ec25e102dd5af
+        dest-filename: entrypoints.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/exceptiongroup/1.1.3/download/noarch/exceptiongroup-1.1.3-pyhd8ed1ab_0.conda
+        sha256: c28f715e049fe0f09785660bcbffa175ffb438720e5bc5a60d56d4b08364b315
+        dest-filename: exceptiongroup.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/executing/2.0.1/download/noarch/executing-2.0.1-pyhd8ed1ab_0.conda
+        sha256: c738804ab1e6376f8ea63372229a04c8d658dc90fd5a218c6273a2eaf02f4057
+        dest-filename: executing.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/idna/3.4/download/noarch/idna-3.4-pyhd8ed1ab_0.tar.bz2
+        sha256: 9887c35c374ec1847f167292d3fde023cb4c994a4ceeec283072b95440131f09
+        dest-filename: idna.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/json5/0.9.14/download/noarch/json5-0.9.14-pyhd8ed1ab_0.conda
+        sha256: 41514104208c092959bef0713cbd795e72c535f2f939b7903d8c97809f2adaa7
+        dest-filename: json5.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jsonpointer/2.4/download/linux-64/jsonpointer-2.4-py312h7900ff3_3.conda
+        sha256: c211a79cff8aa001a6e14e923c37278231dca7f0970d8db155c4b9e48ac87a5a
+        dest-filename: jsonpointer.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/markupsafe/2.1.3/download/linux-64/markupsafe-2.1.3-py312h98912ed_1.conda
+        sha256: 2da8fc396399cd3dec8e1464d6b592adca0498e353dc3cdfac34f7eb563956c9
+        dest-filename: markupsafe.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/mistune/3.0.1/download/noarch/mistune-3.0.1-pyhd8ed1ab_0.conda
+        sha256: 0b4558d3afb64e23b66f5279b704de76ebeb6b4eebbf913d65fbd4ba7d9acc2f
+        dest-filename: mistune.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/nest-asyncio/1.5.8/download/noarch/nest-asyncio-1.5.8-pyhd8ed1ab_0.conda
+        sha256: d7b795b4e754136841c6da3f9fa1a0f7ec37bc7167e7dd68c5b45e657133e008
+        dest-filename: nest-asyncio.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/packaging/23.2/download/noarch/packaging-23.2-pyhd8ed1ab_0.conda
+        sha256: 69b3ace6cca2dab9047b2c24926077d81d236bef45329d264b394001e3c3e52f
+        dest-filename: packaging.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pandocfilters/1.5.0/download/noarch/pandocfilters-1.5.0-pyhd8ed1ab_0.tar.bz2
+        sha256: 2bb9ba9857f4774b85900c2562f7e711d08dd48e2add9bee4e1612fbee27e16f
+        dest-filename: pandocfilters.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/parso/0.8.3/download/noarch/parso-0.8.3-pyhd8ed1ab_0.tar.bz2
+        sha256: 4e26d5daf5de0e31aa5e74ac56386a361b202433b83f024fdadbf07d4a244da4
+        dest-filename: parso.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pickleshare/0.7.5/download/noarch/pickleshare-0.7.5-py_1003.tar.bz2
+        sha256: a1ed1a094dd0d1b94a09ed85c283a0eb28943f2e6f22161fb45e128d35229738
+        dest-filename: pickleshare.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pkgutil-resolve-name/1.3.10/download/noarch/pkgutil-resolve-name-1.3.10-pyhd8ed1ab_1.conda
+        sha256: fecf95377134b0e8944762d92ecf7b0149c07d8186fb5db583125a2705c7ea0a
+        dest-filename: pkgutil-resolve-name.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/prometheus_client/0.18.0/download/noarch/prometheus_client-0.18.0-pyhd8ed1ab_0.conda
+        sha256: 0e0257eee11d3e0b3f73566283fd6c705b1b2a5dbc7d9a609fa885519a62913e
+        dest-filename: prometheus_client.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/psutil/5.9.5/download/linux-64/psutil-5.9.5-py312h98912ed_1.conda
+        sha256: ef5af757dd7a5f5ee97df4189937a1536b7a6f43565caaae5261c39d35d03f1e
+        dest-filename: psutil.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ptyprocess/0.7.0/download/noarch/ptyprocess-0.7.0-pyhd3deb0d_0.tar.bz2
+        sha256: fb31e006a25eb2e18f3440eb8d17be44c8ccfae559499199f73584566d0a444a
+        dest-filename: ptyprocess.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pure_eval/0.2.2/download/noarch/pure_eval-0.2.2-pyhd8ed1ab_0.tar.bz2
+        sha256: 72792f9fc2b1820e37cc57f84a27bc819c71088c3002ca6db05a2e56404f9d44
+        dest-filename: pure_eval.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pycparser/2.21/download/noarch/pycparser-2.21-pyhd8ed1ab_0.tar.bz2
+        sha256: 74c63fd03f1f1ea2b54e8bc529fd1a600aaafb24027b738d0db87909ee3a33dc
+        dest-filename: pycparser.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pygments/2.16.1/download/noarch/pygments-2.16.1-pyhd8ed1ab_0.conda
+        sha256: 3f0f0fadc6084960ec8cc00a32a03529c562ffea3b527eb73b1653183daad389
+        dest-filename: pygments.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pysocks/1.7.1/download/noarch/pysocks-1.7.1-pyha2e5f31_6.tar.bz2
+        sha256: a42f826e958a8d22e65b3394f437af7332610e43ee313393d1cf143f0a2d274b
+        dest-filename: pysocks.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/python-fastjsonschema/2.18.1/download/noarch/python-fastjsonschema-2.18.1-pyhd8ed1ab_0.conda
+        sha256: 3fb1af1ac7525072c46e111bc4e96ddf971f792ab049ca3aa25dbebbaffb6f7d
+        dest-filename: python-fastjsonschema.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/python-json-logger/2.0.7/download/noarch/python-json-logger-2.0.7-pyhd8ed1ab_0.conda
+        sha256: 4790787fe1f4e8da616edca4acf6a4f8ed4e7c6967aa31b920208fc8f95efcca
+        dest-filename: python-json-logger.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pytz/2023.3.post1/download/noarch/pytz-2023.3.post1-pyhd8ed1ab_0.conda
+        sha256: 6b680e63d69aaf087cd43ca765a23838723ef59b0a328799e6363eb13f52c49e
+        dest-filename: pytz.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pyyaml/6.0.1/download/linux-64/pyyaml-6.0.1-py312h98912ed_1.conda
+        sha256: 7f347a10a7121b08d79d21cd4f438c07c23479ea0c74dfb89d6dc416f791bb7f
+        dest-filename: pyyaml.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pyzmq/25.1.1/download/linux-64/pyzmq-25.1.1-py312h886d080_2.conda
+        sha256: 9e64958131e6f2d2d3739604279befba4b1a25ecde6288f34a172ee1d4742c5b
+        dest-filename: pyzmq.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/rfc3986-validator/0.1.1/download/noarch/rfc3986-validator-0.1.1-pyh9f0ad1d_0.tar.bz2
+        sha256: 2a5b495a1de0f60f24d8a74578ebc23b24aa53279b1ad583755f223097c41c37
+        dest-filename: rfc3986-validator.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/rpds-py/0.10.6/download/linux-64/rpds-py-0.10.6-py312h4b3b743_0.conda
+        sha256: 81fc2c417e44992033b43fb7c847e2b3d46548a187118fac8c8021bc484fe5ed
+        dest-filename: rpds-py.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/send2trash/1.8.2/download/noarch/send2trash-1.8.2-pyh41d4057_0.conda
+        sha256: e74d3faf51a6cc429898da0209d95b209270160f3edbf2f6d8b61a99428301cd
+        dest-filename: send2trash.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/setuptools/68.2.2/download/noarch/setuptools-68.2.2-pyhd8ed1ab_0.conda
+        sha256: 851901b1f8f2049edb36a675f0c3f9a98e1495ef4eb214761b048c6f696a06f7
+        dest-filename: setuptools.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/six/1.16.0/download/noarch/six-1.16.0-pyh6c4a22f_0.tar.bz2
+        sha256: a85c38227b446f42c5b90d9b642f2c0567880c15d72492d8da074a59c8f91dd6
+        dest-filename: six.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/sniffio/1.3.0/download/noarch/sniffio-1.3.0-pyhd8ed1ab_0.tar.bz2
+        sha256: a3fd30754c20ddb28b777db38345ea00d958f46701f0decd6291a81c0f4eee78
+        dest-filename: sniffio.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/soupsieve/2.5/download/noarch/soupsieve-2.5-pyhd8ed1ab_1.conda
+        sha256: 54ae221033db8fbcd4998ccb07f3c3828b4d77e73b0c72b18c1d6a507059059c
+        dest-filename: soupsieve.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/tomli/2.0.1/download/noarch/tomli-2.0.1-pyhd8ed1ab_0.tar.bz2
+        sha256: 4cd48aba7cd026d17e86886af48d0d2ebc67ed36f87f6534f4b67138f5a5a58f
+        dest-filename: tomli.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/tornado/6.3.3/download/linux-64/tornado-6.3.3-py312h98912ed_1.conda
+        sha256: 970d4e3e0b9b34dc8383055a956d4a9158a9f527264bc7ece769ba284d2395ff
+        dest-filename: tornado.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/traitlets/5.13.0/download/noarch/traitlets-5.13.0-pyhd8ed1ab_0.conda
+        sha256: 7ac67960ba2e8c16818043cc65ac6190fa4fd95f5b24357df58e4f73d5e60a10
+        dest-filename: traitlets.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/types-python-dateutil/2.8.19.14/download/noarch/types-python-dateutil-2.8.19.14-pyhd8ed1ab_0.conda
+        sha256: 7b0129c72d371fa7a06ed5dd1d701844c20d03bb4641a38a88a982b347d087e2
+        dest-filename: types-python-dateutil.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/typing_extensions/4.8.0/download/noarch/typing_extensions-4.8.0-pyha770c72_0.conda
+        sha256: 38d16b5c53ec1af845d37d22e7bb0e6c934c7f19499123507c5a470f6f8b7dde
+        dest-filename: typing_extensions.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/typing_utils/0.1.0/download/noarch/typing_utils-0.1.0-pyhd8ed1ab_0.tar.bz2
+        sha256: 9e3758b620397f56fb709f796969de436d63b7117897159619b87938e1f78739
+        dest-filename: typing_utils.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/uri-template/1.3.0/download/noarch/uri-template-1.3.0-pyhd8ed1ab_0.conda
+        sha256: b76904b53721dc88a46352324c79d2b077c2f74a9f7208ad2c4249892669ae94
+        dest-filename: uri-template.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/webcolors/1.13/download/noarch/webcolors-1.13-pyhd8ed1ab_0.conda
+        sha256: 6e097d5fe92849ad3af2c2a313771ad2fbf1cadd4dc4afd552303b2bf3f85211
+        dest-filename: webcolors.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/webencodings/0.5.1/download/noarch/webencodings-0.5.1-pyhd8ed1ab_2.conda
+        sha256: 2adf9bd5482802837bc8814cbe28d7b2a4cbd2e2c52e381329eaa283b3ed1944
+        dest-filename: webencodings.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/websocket-client/1.6.4/download/noarch/websocket-client-1.6.4-pyhd8ed1ab_0.conda
+        sha256: df45b89862edcd7cd5180ec7b8c0c0ca9fb4d3f7d49ddafccdc76afcf50d8da6
+        dest-filename: websocket-client.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/wheel/0.41.3/download/noarch/wheel-0.41.3-pyhd8ed1ab_0.conda
+        sha256: 84c3b57fba778add2bd47b7cc70e86f746d2c55549ffd2ccb6f3d6bf7c94d21d
+        dest-filename: wheel.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/zipp/3.17.0/download/noarch/zipp-3.17.0-pyhd8ed1ab_0.conda
+        sha256: bced1423fdbf77bca0a735187d05d9b9812d2163f60ab426fc10f11f92ecbe26
+        dest-filename: zipp.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/anyio/4.0.0/download/noarch/anyio-4.0.0-pyhd8ed1ab_0.conda
+        sha256: 64125775b2e724db5c72e431dd180495d5d509d0a2d1228a122e6af9f1b60e33
+        dest-filename: anyio.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/asttokens/2.4.1/download/noarch/asttokens-2.4.1-pyhd8ed1ab_0.conda
+        sha256: 708168f026df19a0344983754d27d1f7b28bb21afc7b97a82f02c4798a3d2111
+        dest-filename: asttokens.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/async-lru/2.0.4/download/noarch/async-lru-2.0.4-pyhd8ed1ab_0.conda
+        sha256: 7ed83731979fe5b046c157730e50af0e24454468bbba1ed8fc1a3107db5d7518
+        dest-filename: async-lru.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/babel/2.13.1/download/noarch/babel-2.13.1-pyhd8ed1ab_0.conda
+        sha256: 1f955c700db16f65b16c9e9c1613436480d5497970b8030b7a9ebe1620cc2147
+        dest-filename: babel.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/backports.functools_lru_cache/1.6.5/download/noarch/backports.functools_lru_cache-1.6.5-pyhd8ed1ab_0.conda
+        sha256: 7027bb689dd4ca4a08e3b25805de9d04239be6b31125993558f21f102a9d2700
+        dest-filename: backports.functools_lru_cache.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/beautifulsoup4/4.12.2/download/noarch/beautifulsoup4-4.12.2-pyha770c72_0.conda
+        sha256: 52d3e6bcd442537e22699cd227d8fdcfd54b708eeb8ee5b4c671a6a9b9cd74da
+        dest-filename: beautifulsoup4.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/bleach/6.1.0/download/noarch/bleach-6.1.0-pyhd8ed1ab_0.conda
+        sha256: 845e77ef495376c5c3c328ccfd746ca0ef1978150cae8eae61a300fe7755fb08
+        dest-filename: bleach.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/cached-property/1.5.2/download/noarch/cached-property-1.5.2-hd8ed1ab_1.tar.bz2
+        sha256: 561e6660f26c35d137ee150187d89767c988413c978e1b712d53f27ddf70ea17
+        dest-filename: cached-property.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/cffi/1.16.0/download/linux-64/cffi-1.16.0-py312hf06ca03_0.conda
+        sha256: 5a36e2c254603c367d26378fa3a205bd92263e30acf195f488749562b4c44251
+        dest-filename: cffi.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/comm/0.1.4/download/noarch/comm-0.1.4-pyhd8ed1ab_0.conda
+        sha256: 11057745946a95ee7cc4c98900a60c7362266a4cb28bc97d96cd88e3056eb701
+        dest-filename: comm.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/importlib-metadata/6.8.0/download/noarch/importlib-metadata-6.8.0-pyha770c72_0.conda
+        sha256: 2797ed927d65324309b6c630190d917b9f2111e0c217b721f80429aeb57f9fcf
+        dest-filename: importlib-metadata.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/importlib_resources/6.1.0/download/noarch/importlib_resources-6.1.0-pyhd8ed1ab_0.conda
+        sha256: adab6da633ec3b642f036ab5c1196c3e2db0e8db57fb0c7fc9a8e06e29fa9bdc
+        dest-filename: importlib_resources.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jedi/0.19.1/download/noarch/jedi-0.19.1-pyhd8ed1ab_0.conda
+        sha256: 362f0936ef37dfd1eaa860190e42a6ebf8faa094eaa3be6aa4d9ace95f40047a
+        dest-filename: jedi.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jinja2/3.1.2/download/noarch/jinja2-3.1.2-pyhd8ed1ab_1.tar.bz2
+        sha256: b045faba7130ab263db6a8fdc96b1a3de5fcf85c4a607c5f11a49e76851500b5
+        dest-filename: jinja2.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyterlab_pygments/0.2.2/download/noarch/jupyterlab_pygments-0.2.2-pyhd8ed1ab_0.tar.bz2
+        sha256: 08453e09d5a6bbaeeca839553a5dfd7a377a97550efab96019c334a8042f54f5
+        dest-filename: jupyterlab_pygments.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/matplotlib-inline/0.1.6/download/noarch/matplotlib-inline-0.1.6-pyhd8ed1ab_0.tar.bz2
+        sha256: aa091b88aec55bfa2d9207028d8cdc689b9efb090ae27b99557e93c675be2f3c
+        dest-filename: matplotlib-inline.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/overrides/7.4.0/download/noarch/overrides-7.4.0-pyhd8ed1ab_0.conda
+        sha256: 29db8c3b521d261bf71897ba3cfbebc81cd61e581b30fcb984b5a713f02fe1ff
+        dest-filename: overrides.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pexpect/4.8.0/download/noarch/pexpect-4.8.0-pyh1a96a4e_2.tar.bz2
+        sha256: 07706c0417ead94f359ca7278f65452d3c396448777aba1da6a11fc351bdca9a
+        dest-filename: pexpect.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/pip/23.3.1/download/noarch/pip-23.3.1-pyhd8ed1ab_0.conda
+        sha256: 435829a03e1c6009f013f29bb83de8b876c388820bf8cf69a7baeec25f6a3563
+        dest-filename: pip.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/python-dateutil/2.8.2/download/noarch/python-dateutil-2.8.2-pyhd8ed1ab_0.tar.bz2
+        sha256: 54d7785c7678166aa45adeaccfc1d2b8c3c799ca2dc05d4a82bb39b1968bd7da
+        dest-filename: python-dateutil.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/referencing/0.30.2/download/noarch/referencing-0.30.2-pyhd8ed1ab_0.conda
+        sha256: a6768fabc12f1eed87fec68c5c65439e908655cded1e458d70a164abbce13287
+        dest-filename: referencing.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/rfc3339-validator/0.1.4/download/noarch/rfc3339-validator-0.1.4-pyhd8ed1ab_0.tar.bz2
+        sha256: 7c7052b51de0b5c558f890bb11f8b5edbb9934a653d76be086b1182b9f54185d
+        dest-filename: rfc3339-validator.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/terminado/0.17.1/download/noarch/terminado-0.17.1-pyh41d4057_0.conda
+        sha256: bce252eb53330a8ba9617caa7a1dc75ce602c8808cf547a8f4d48285901f47c3
+        dest-filename: terminado.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/tinycss2/1.2.1/download/noarch/tinycss2-1.2.1-pyhd8ed1ab_0.tar.bz2
+        sha256: f0db1a2298a5e10e30f4b947566c7229442834702f549dded40a73ecdea7502d
+        dest-filename: tinycss2.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/typing-extensions/4.8.0/download/noarch/typing-extensions-4.8.0-hd8ed1ab_0.conda
+        sha256: d6e1dddd0c372218ef15912383d351ac8c73465cbf16238017f0269813cafe2d
+        dest-filename: typing-extensions.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/urllib3/2.0.7/download/noarch/urllib3-2.0.7-pyhd8ed1ab_0.conda
+        sha256: 9fe14735dde74278c6f1710cbe883d5710fc98501a96031dec6849a8d8a1bb11
+        dest-filename: urllib3.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/argon2-cffi-bindings/21.2.0/download/linux-64/argon2-cffi-bindings-21.2.0-py312h98912ed_4.conda
+        sha256: 8ddb4a586bc128f1b9484f82c5cb0226340527fbfe093adf3b76b7e755e11477
+        dest-filename: argon2-cffi-bindings.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/arrow/1.3.0/download/noarch/arrow-1.3.0-pyhd8ed1ab_0.conda
+        sha256: ff49825c7f9e29e09afa6284300810e7a8640d621740efb47c4541f4dc4969db
+        dest-filename: arrow.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/fqdn/1.5.1/download/noarch/fqdn-1.5.1-pyhd8ed1ab_0.tar.bz2
+        sha256: 6cfd1f9bcd2358a69fb571f4b3af049b630d52647d906822dbedac03e84e4f63
+        dest-filename: fqdn.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/importlib_metadata/6.8.0/download/noarch/importlib_metadata-6.8.0-hd8ed1ab_0.conda
+        sha256: b96e01dc42d547d6d9ceb1c5b52a5232cc04e40153534350f702c3e0418a6b3f
+        dest-filename: importlib_metadata.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jsonschema-specifications/2023.7.1/download/noarch/jsonschema-specifications-2023.7.1-pyhd8ed1ab_0.conda
+        sha256: 7b0061e106674f27cc718f79a095e90a5667a3635ec6626dd23b3be0fd2bfbdc
+        dest-filename: jsonschema-specifications.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter_server_terminals/0.4.4/download/noarch/jupyter_server_terminals-0.4.4-pyhd8ed1ab_1.conda
+        sha256: 9f4c5fef9beef9fceed628db7a10b888f3308b37ae257ad3d50046088317ebf1
+        dest-filename: jupyter_server_terminals.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/platformdirs/3.11.0/download/noarch/platformdirs-3.11.0-pyhd8ed1ab_0.conda
+        sha256: b3d809ff5a18ee8514bba8bc05a23b4cdf1758090a18a2cf742af38aed405144
+        dest-filename: platformdirs.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/requests/2.31.0/download/noarch/requests-2.31.0-pyhd8ed1ab_0.conda
+        sha256: 9f629d6fd3c8ac5f2a198639fe7af87c4db2ac9235279164bfe0fcb49d8c4bad
+        dest-filename: requests.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/stack_data/0.6.2/download/noarch/stack_data-0.6.2-pyhd8ed1ab_0.conda
+        sha256: a58433e75229bec39f3be50c02efbe9b7083e53a1f31d8ee247564f370191eec
+        dest-filename: stack_data.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/wcwidth/0.2.9/download/noarch/wcwidth-0.2.9-pyhd8ed1ab_0.conda
+        sha256: 7552f6545ed212b9ae5d023870481fc377c7f18b4854b63160699b95a420c42e
+        dest-filename: wcwidth.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/argon2-cffi/23.1.0/download/noarch/argon2-cffi-23.1.0-pyhd8ed1ab_0.conda
+        sha256: 130766446f5507bd44df957b6b5c898a8bd98f024bb426ed6cb9ff1ad67fc677
+        dest-filename: argon2-cffi.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/isoduration/20.11.0/download/noarch/isoduration-20.11.0-pyhd8ed1ab_0.tar.bz2
+        sha256: 7bb5c4d994361022f47a807b5e7d101b3dce16f7dd8a0af6ffad9f479d346493
+        dest-filename: isoduration.tar.bz2
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jsonschema/4.19.2/download/noarch/jsonschema-4.19.2-pyhd8ed1ab_0.conda
+        sha256: 07e5d395d83c4b12a7abe3989fb42abdcd3b1c51cd27549e5eab390bb8c7bf0f
+        dest-filename: jsonschema.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter_core/5.5.0/download/linux-64/jupyter_core-5.5.0-py312h7900ff3_0.conda
+        sha256: 3c93fc1b2de9a184f073e87806ad9b1a12f55f028171570190299cde9a021eb0
+        dest-filename: jupyter_core.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/prompt-toolkit/3.0.39/download/noarch/prompt-toolkit-3.0.39-pyha770c72_0.conda
+        sha256: 10e7fdc75d4b85633be6b12a70b857053987127a808caa0f88b2cba4b3ce6359
+        dest-filename: prompt-toolkit.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jsonschema-with-format-nongpl/4.19.2/download/noarch/jsonschema-with-format-nongpl-4.19.2-pyhd8ed1ab_0.conda
+        sha256: b06681b4499635f0ed901f4879122bfd3ff6ef28de1797367769a4ba6b990b0d
+        dest-filename: jsonschema-with-format-nongpl.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter_client/8.5.0/download/noarch/jupyter_client-8.5.0-pyhd8ed1ab_0.conda
+        sha256: e4478e137e0975ce94ef4ee6e4a6736afaf4a00e99bc8007a275bcb39fe728d9
+        dest-filename: jupyter_client.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/nbformat/5.9.2/download/noarch/nbformat-5.9.2-pyhd8ed1ab_0.conda
+        sha256: fc82c5a9116820757b03ffb836b36f0f50e4cd390018024dbadb0ee0217f6992
+        dest-filename: nbformat.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/prompt_toolkit/3.0.39/download/noarch/prompt_toolkit-3.0.39-hd8ed1ab_0.conda
+        sha256: 89f7fecc7355181dbc2ab851e668a2fce6aa4830b336a34c93b59bda93206270
+        dest-filename: prompt_toolkit.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ipython/8.16.1/download/noarch/ipython-8.16.1-pyh0d859eb_0.conda
+        sha256: 2dc119746ddac02cb01644ae7c7ac54a296366e2edf0d178f50f833113aaf94a
+        dest-filename: ipython.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter_events/0.8.0/download/noarch/jupyter_events-0.8.0-pyhd8ed1ab_0.conda
+        sha256: 44742f7b6453774fbbdf7cec20282f88c7362707990790116fec23270b81b447
+        dest-filename: jupyter_events.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/nbclient/0.8.0/download/noarch/nbclient-0.8.0-pyhd8ed1ab_0.conda
+        sha256: 4ebd237cdf4bfa5226f92d2ae78fab8dba27696909391884dc6594ca6f9df5ff
+        dest-filename: nbclient.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/ipykernel/6.26.0/download/noarch/ipykernel-6.26.0-pyhf8b6a83_0.conda
+        sha256: 9e647454f7572101657a07820ebed294df9a6a527b041cd5e4dd98b8aa3db625
+        dest-filename: ipykernel.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/nbconvert-core/7.10.0/download/noarch/nbconvert-core-7.10.0-pyhd8ed1ab_0.conda
+        sha256: 693fca2715f78faee1c5be2362d2f1ea30e6b7179b4d2762fd9ffdaae5c8a65a
+        dest-filename: nbconvert-core.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter_server/2.9.1/download/noarch/jupyter_server-2.9.1-pyhd8ed1ab_0.conda
+        sha256: bb9a60ff41085031a28204add4e6120990437cfad341db297519f0a0f0df8e18
+        dest-filename: jupyter_server.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyter-lsp/2.2.0/download/noarch/jupyter-lsp-2.2.0-pyhd8ed1ab_0.conda
+        sha256: 16fc7b40024adece716ba7227e5c123a2deccc13f946a10d9a3270493908d11c
+        dest-filename: jupyter-lsp.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/jupyterlab_server/2.25.0/download/noarch/jupyterlab_server-2.25.0-pyhd8ed1ab_0.conda
+        sha256: 608a878d08e0f4f51dd9a61eaead7c0e22d07f48aad06e3e2f6d6f1d0a929746
+        dest-filename: jupyterlab_server.conda
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://anaconda.org/conda-forge/notebook-shim/0.2.3/download/noarch/notebook-shim-0.2.3-pyhd8ed1ab_0.conda
+        sha256: f028d7ad1f2175cde307db08b60d07e371b9d6f035cfae6c81ea94b4c408c538
+        dest-filename: notebook-shim.conda
       - type: file
         only-arches:
           - x86_64
         url: https://anaconda.org/conda-forge/jupyterlab/4.0.7/download/noarch/jupyterlab-4.0.7-pyhd8ed1ab_0.conda
         sha256: 1d841546fd239d7edefbf00edd3bad4680b12c3eb2549026d6aa70a301f23295
-        dest-filename: jupyterlab-4.0.7-pyhd8ed1ab_0.conda
+        dest-filename: jupyterlab.conda
   - name: zypak
     sources:
       - type: git
@@ -76,7 +1140,9 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
+          - /app/anaconda/bin/conda init bash
+          - /app/anaconda/bin/conda activate cling
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/JupyterLab/jupyterlab-desktop "$@"
+          - exec zypak-wrapper jupyter-lab "$@"
       - type: file
         path: org.jupyter.JupyterLab.metainfo.xml
