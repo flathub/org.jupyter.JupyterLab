@@ -18,7 +18,7 @@ modules:
   - name: mamba
     buildsystem: simple
     build-commands:
-      - bash Miniforge3-Linux-x86_64.sh -b -p $FLATPAK_DEST/anaconda
+      - bash Mambaforge.sh -b -p $FLATPAK_DEST/anaconda
       - install -Dm 755 -t $FLATPAK_DEST/download _libgcc_mutex.tar.bz2
       - install -Dm 755 -t $FLATPAK_DEST/download ca-certificates.conda
       - install -Dm 755 -t $FLATPAK_DEST/download ld_impl_linux-64.conda
@@ -154,22 +154,23 @@ modules:
       - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab_server.conda
       - install -Dm 755 -t $FLATPAK_DEST/download notebook-shim.conda
       - install -Dm 755 -t $FLATPAK_DEST/download jupyterlab.conda
+      #- $FLATPAK_DEST/anaconda/bin/conda list #debug
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/_libgcc_mutex.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ca-certificates.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ld_impl_linux-64.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libstdcxx-ng.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python_abi.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python_abi.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tzdata.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libgomp.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/_openmp_mutex.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libgcc-ng.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/bzip2.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libexpat.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libffi.tar.bz2
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libffi.tar.bz2 # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libnsl.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libsodium.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libuuid.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libzlib.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/libzlib.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/ncurses.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/openssl.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/xz.tar.bz2
@@ -178,8 +179,9 @@ modules:
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/readline.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/tk.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/zeromq.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/python.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/attrs.conda
+      - $FLATPAK_DEST/anaconda/bin/conda list
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/backcall.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/backports.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/brotli-python.conda
@@ -198,7 +200,7 @@ modules:
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/markupsafe.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/mistune.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/nest-asyncio.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/packaging.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/packaging.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pandocfilters.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/parso.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/pickleshare.tar.bz2
@@ -218,7 +220,7 @@ modules:
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/rfc3986-validator.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/rpds-py.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/send2trash.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/setuptools.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/setuptools.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/six.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/sniffio.tar.bz2
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/soupsieve.conda
@@ -267,7 +269,7 @@ modules:
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jsonschema-specifications.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyter_server_terminals.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/platformdirs.conda
-      - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/requests.conda
+      #- $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/requests.conda # don't install latest version, dependency hell
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/stack_data.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/wcwidth.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/argon2-cffi.conda
@@ -289,14 +291,16 @@ modules:
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab_server.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/notebook-shim.conda
       - $FLATPAK_DEST/anaconda/bin/mamba install $FLATPAK_DEST/download/jupyterlab.conda
+      - $FLATPAK_DEST/anaconda/bin/conda list # debug
       - rm -r $FLATPAK_DEST/download
-      - rm Miniforge3-Linux-x86_64.sh
+      - rm Mambaforge.sh
     sources:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
-        sha256: b3e14bd70f99bc8959445fad3532128a6af36c5e77bc62226db0e80d1df0e9e9
+        url: https://github.com/conda-forge/miniforge/releases/download/23.3.1-0/Mambaforge-23.3.1-0-Linux-x86_64.sh
+        sha256: c425dcc3501692f23564d8b0a7b3ba69166c61424e9ce0d825f64f9479dcafa1
+        dest-filename: Mambaforge.sh
       - type: file
         only-arches:
           - x86_64
