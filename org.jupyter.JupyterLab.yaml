@@ -40,8 +40,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.0.5-1/JupyterLab-Setup-Debian.deb
-        sha256: 7f03386514d8c07e92999405e60ad95b95eb61c01f40cf906556c3d368afd5d4
+        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.0.7-1/JupyterLab-Setup-Debian.deb
+        sha256: 51434a562c15b00958b2d7cb8ebf75387b72a62e741f43026ac7b6fb330335ec
         x-checker-data:
           type: git
           tag-pattern: ^v\d+(\.\d+)*(-\d+)?$
