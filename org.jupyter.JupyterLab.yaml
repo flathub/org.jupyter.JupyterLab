@@ -27,8 +27,8 @@ modules:
   - name: jupyterlab
     buildsystem: simple
     build-commands:
-      - ar -x JupyterLab-Setup-Debian.deb
-      - rm -f JupyterLab-Setup-Debian.deb
+      - ar -x JupyterLab-Setup-Debian-x64.deb
+      - rm -f JupyterLab-Setup-Debian-x64.deb
       - tar -xf data.tar.xz
       - rm -f control.tar.gz data.tar.xz debian-binary
       - cp -r opt/* usr/* $FLATPAK_DEST
@@ -40,8 +40,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.0.11-1/JupyterLab-Setup-Debian.deb
-        sha256: 76ddfde1a4aa41247cf9273a3f5511809112e7c62478d39ad26eb14bf6d9c4b8
+        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.0.12-1/JupyterLab-Setup-Debian-x64.deb
+        sha256: 893f968eeb151b104bb626d5af19b131998f6630fe014e25a5ac32b206413f5b
         x-checker-data:
           type: git
           tag-pattern: ^v\d+(\.\d+)*(-\d+)?$
