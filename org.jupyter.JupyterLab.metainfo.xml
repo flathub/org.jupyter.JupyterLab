@@ -5,6 +5,7 @@
   <project_license>BSD-3-Clause</project_license>
   <name>JupyterLab Desktop</name>
   <summary>JupyterLab desktop application, based on Electron</summary>
+  <developer_name>JupyterLab</developer_name>
   <description>
     <p>JupyterLab Desktop is the cross-platform desktop application for JupyterLab. It is the quickest and easiest way to get started with Jupyter notebooks on your personal computer, with the flexibility for advanced use cases.</p>
   </description>
