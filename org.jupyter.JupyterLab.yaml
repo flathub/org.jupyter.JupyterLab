@@ -41,7 +41,7 @@ modules:
         only-arches:
           - x86_64
         url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.1.2-1/JupyterLab-Setup-Debian-x64.deb
-        sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+        sha256: cd9a6c05accf29df5953824ca6fed27a73152c8dccd8bc22b8f51aa4cdee04ca
         x-checker-data:
           type: git
           tag-pattern: ^v\d+(\.\d+)*(-\d+)?$
