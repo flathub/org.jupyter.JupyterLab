@@ -43,8 +43,12 @@ modules:
         url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.1.5-1/JupyterLab-Setup-Debian-x64.deb
         sha256: be238249df2520a5cf036a2e3a284aa18549e4942b747afc1cebcdebf9c365de
         x-checker-data:
-          type: git
-          tag-pattern: ^v\d+(\.\d+)*(-\d+)?$
+          type: json
+          url: https://api.github.com/repos/jupyterlab/jupyterlab-desktop/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          timestamp-query: .published_at
+          url-query: >-
+            .assets[] | select(.name == "JupyterLab-Setup-Debian-x64.deb") | .browser_download_url
       - type: script
         dest-filename: run.sh
         commands:
