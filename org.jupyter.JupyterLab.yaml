@@ -1,9 +1,9 @@
 app-id: org.jupyter.JupyterLab
 runtime: org.freedesktop.Platform
-runtime-version: "22.08"
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: "22.08"
+base-version: '23.08'
 command: run.sh
 finish-args:
   - --share=ipc
@@ -33,18 +33,22 @@ modules:
       - rm -f control.tar.gz data.tar.xz debian-binary
       - cp -r opt/* usr/* $FLATPAK_DEST
       - rm -rf opt usr
-      - install -Dm 755 -t $FLATPAK_DEST/bin run.sh 
+      - install -Dm 755 -t $FLATPAK_DEST/bin run.sh
       - install -Dm 644 -t /app/share/metainfo org.jupyter.JupyterLab.metainfo.xml
       - desktop-file-edit --set-key=Exec --set-value="run.sh %U" $FLATPAK_DEST/share/applications/jupyterlab-desktop.desktop
     sources:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.1.5-1/JupyterLab-Setup-Debian-x64.deb
-        sha256: be238249df2520a5cf036a2e3a284aa18549e4942b747afc1cebcdebf9c365de
+        url: https://github.com/jupyterlab/jupyterlab-desktop/releases/download/v4.1.8-1/JupyterLab-Setup-Debian-x64.deb
+        sha256: 7ffa63dfa3757b2b6b0a4559d474f6f54b20f9b7988f7051487bb262ec304996
         x-checker-data:
-          type: git
-          tag-pattern: ^v\d+(\.\d+)*(-\d+)?$
+          type: json
+          url: https://api.github.com/repos/jupyterlab/jupyterlab-desktop/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          timestamp-query: .published_at
+          url-query: >-
+            .assets[] | select(.name == "JupyterLab-Setup-Debian-x64.deb") | .browser_download_url
       - type: script
         dest-filename: run.sh
         commands:
