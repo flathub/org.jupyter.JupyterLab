@@ -15,15 +15,6 @@ finish-args:
 rename-desktop-file: jupyterlab-desktop.desktop
 rename-icon: jupyterlab-desktop
 modules:
-  - name: zypak
-    sources:
-      - type: git
-        url: https://github.com/refi64/zypak
-        tag: v2025.09
-        commit: 693a71c5ffa80ec9c9ce2ae03b1ccc493c698e53
-        x-checker-data:
-          type: git
-          tag-pattern: ^v([\d.]+)$
   - name: jupyterlab
     buildsystem: simple
     build-commands:
