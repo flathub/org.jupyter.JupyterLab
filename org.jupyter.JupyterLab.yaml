@@ -1,9 +1,9 @@
 app-id: org.jupyter.JupyterLab
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 base: org.electronjs.Electron2.BaseApp
-base-version: '23.08'
+base-version: '25.08'
 command: run.sh
 finish-args:
   - --share=ipc
@@ -19,11 +19,11 @@ modules:
     sources:
       - type: git
         url: https://github.com/refi64/zypak
-        tag: v2023.02beta.1
-        commit: 64f6ccfdfd223cc2d2d68608ef42b8ff2fd6400e
+        tag: v2025.09
+        commit: 693a71c5ffa80ec9c9ce2ae03b1ccc493c698e53
         x-checker-data:
           type: git
-          tag-pattern: ^v([\d.]+(?:beta[\d.]+?))$
+          tag-pattern: ^v([\d.]+)$
   - name: jupyterlab
     buildsystem: simple
     build-commands:
